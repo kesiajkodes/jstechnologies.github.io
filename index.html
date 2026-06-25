@@ -3,66 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1E1E2E">
+    <meta name="description" content="JSTech builds lightweight, user-focused Windows software — including JLOCK and JVIEW. Fast, reliable, bloat-free.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JSTech - Lightweight Software for Windows">
+    <meta property="og:description" content="Independent software for Windows that strips away complexity — including JLOCK and JVIEW. Fast, reliable, bloat-free.">
+    <meta property="og:image" content="JLOCK.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="JSTech - Lightweight Software for Windows">
+    <meta name="twitter:description" content="Independent software for Windows that strips away complexity — including JLOCK and JVIEW.">
     <title>JSTech - Lightweight Software for Windows</title>
+    <link rel="icon" type="image/png" href="JLOCK.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Icon sprite (monochrome, currentColor) -->
+    <svg style="display:none" aria-hidden="true">
+        <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+        </symbol>
+        <symbol id="icon-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="12" r="5"/>
+            <circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/>
+        </symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3 L20 6 V11 C20 16 16.5 19.5 12 21 C7.5 19.5 4 16 4 11 V6 Z"/>
+        </symbol>
+        <symbol id="icon-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 8 L12 3 3 8 12 13 21 8 Z"/>
+            <path d="M3 8 V16 L12 21 21 16 V8"/>
+            <path d="M12 13 V21"/>
+        </symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3 V15"/>
+            <path d="M7 10 L12 15 17 10"/>
+            <path d="M4 19 H20"/>
+        </symbol>
+        <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2 V5 M12 19 V22 M4.2 4.2 L6.3 6.3 M17.7 17.7 L19.8 19.8 M2 12 H5 M19 12 H22 M4.2 19.8 L6.3 17.7 M17.7 6.3 L19.8 4.2"/>
+        </symbol>
+        <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.8 A9 9 0 1 1 11.2 3 A7 7 0 0 0 21 12.8 Z"/>
+        </symbol>
+    </svg>
+
+    <!-- App-style top bar -->
+    <header class="topbar" id="topbar">
+        <div class="container topbar-inner">
+            <a href="#" class="brand">
+                <span class="logo-swap brand-mark">
+                    <img src="JSHOT TECHNOLOGIES_LIGHT.png" alt="JSHOT Technologies" class="logo-variant logo-asset-light">
+                    <img src="JSHOT TECHNOLOGIES_DARK.png" alt="" class="logo-variant logo-asset-dark" aria-hidden="true">
+                </span>
+            </a>
+            <nav class="nav-links">
+                <a href="#philosophy">Philosophy</a>
+                <a href="#products">Apps</a>
+            </nav>
+            <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle light and dark theme" aria-pressed="false" title="Toggle theme">
+                <svg class="icon icon-sun" width="18" height="18"><use href="#icon-sun"></use></svg>
+                <svg class="icon icon-moon" width="18" height="18"><use href="#icon-moon"></use></svg>
+            </button>
+        </div>
+    </header>
+
     <!-- Hero Section with Logo -->
     <section class="hero">
         <div class="container">
             <div class="hero-logo">
-                <img src="jstech-logo.png" alt="JSTech Logo" class="logo">
+                <span class="logo-swap logo">
+                    <img src="JSHOT TECHNOLOGIES_LIGHT.png" alt="JSHOT Technologies" class="logo-variant logo-asset-light">
+                    <img src="JSHOT TECHNOLOGIES_DARK.png" alt="" class="logo-variant logo-asset-dark" aria-hidden="true">
+                </span>
             </div>
             <div class="hero-content">
                 <h1>JSTech</h1>
-                <p class="tagline">Lightweight. Efficient. User-Focused.</p>
+                <p class="tagline"><span class="pill pill-soft">Lightweight. Efficient. User-Focused.</span></p>
                 <p class="hero-description">Independent software for Windows that strips away complexity. Fast, reliable, and built for real users.</p>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about" id="philosophy">
         <div class="container">
+            <p class="eyebrow">Philosophy</p>
             <h2>Our Philosophy</h2>
-            <p class="philosophy-intro">Software should serve the user—not the other way around.</p>
-            
-            <div class="philosophy-grid">
-                <div class="philosophy-card">
-                    <h3>Performance First</h3>
-                    <p>Optimized for speed and low system resource usage. Lightning-fast launches, smooth operation on any hardware.</p>
-                </div>
-                <div class="philosophy-card">
-                    <h3>User-Centric Design</h3>
-                    <p>Intuitive interfaces built around real user needs. Minimal learning curve, maximum efficiency.</p>
-                </div>
-                <div class="philosophy-card">
-                    <h3>Simplicity Without Compromise</h3>
-                    <p>Streamlined features that get the job done. No bloat, no distractions, no unnecessary complexity.</p>
-                </div>
-                <div class="philosophy-card">
-                    <h3>Reliability</h3>
-                    <p>Rigorous testing ensures stability and dependability. You can trust our tools to work, every time.</p>
-                </div>
-            </div>
+            <p class="philosophy-statement reveal">No Bullshit.</p>
+            <p class="philosophy-intro reveal">Software should serve the user—not the other way around.</p>
 
-            <div class="core-benefits">
+            <div class="core-benefits reveal">
                 <h3>What Sets JSTech Apart</h3>
                 <div class="benefits-list">
                     <div class="benefit-item">
-                        <span class="benefit-icon">⚡</span>
+                        <span class="benefit-icon"><svg class="icon" width="20" height="20"><use href="#icon-zap"></use></svg></span>
                         <p><strong>No Bloat</strong> – No ads, no tracking, no hidden processes. Pure functionality.</p>
                     </div>
                     <div class="benefit-item">
-                        <span class="benefit-icon">🎯</span>
+                        <span class="benefit-icon"><svg class="icon" width="20" height="20"><use href="#icon-target"></use></svg></span>
                         <p><strong>Purpose-Driven</strong> – Only features that matter. Nothing more, nothing less.</p>
                     </div>
                     <div class="benefit-item">
-                        <span class="benefit-icon">🔒</span>
+                        <span class="benefit-icon"><svg class="icon" width="20" height="20"><use href="#icon-shield"></use></svg></span>
                         <p><strong>Privacy-Respecting</strong> – We don't collect unnecessary data. Your privacy matters.</p>
                     </div>
                     <div class="benefit-item">
-                        <span class="benefit-icon">📦</span>
+                        <span class="benefit-icon"><svg class="icon" width="20" height="20"><use href="#icon-box"></use></svg></span>
                         <p><strong>Lightweight</strong> – Portable versions available. Run anywhere, install nothing.</p>
                     </div>
                 </div>
@@ -70,37 +121,54 @@
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products">
+    <!-- Products Section (view + download in one place) -->
+    <section class="products" id="products">
         <div class="container">
+            <p class="eyebrow">Apps</p>
             <h2>Our Applications</h2>
-            <p class="products-intro">Carefully crafted tools designed to enhance your productivity and workflow.</p>
-            
+            <p class="products-intro">Carefully crafted tools designed to enhance your productivity and workflow. Free to download, available for Windows 10+.</p>
+
             <div class="products-grid">
                 <!-- JLOCK -->
-                <div class="product-card">
+                <div class="product-card reveal">
                     <div class="product-icon">
-                        <img src="jlock-icon.png" alt="JLOCK" class="icon-image">
+                        <img src="JLOCK.png" alt="JLOCK" class="icon-image">
                     </div>
                     <h3>JLOCK</h3>
-                    <p class="product-category">Security & File Protection</p>
+                    <div class="product-meta">
+                        <span class="pill pill-soft">Security &amp; File Protection</span>
+                        <span class="pill pill-soft">Version 1.0.0</span>
+                    </div>
                     <p>Advanced file and folder locking software with military-grade encryption. Protect your sensitive data with access control and secure deletion capabilities. Fast, reliable, and completely bloat-free.</p>
                     <ul class="feature-list">
                         <li>Military-grade encryption</li>
-                        <li>Access control & permissions</li>
+                        <li>Access control &amp; permissions</li>
                         <li>Secure file deletion</li>
-                        <li>Lightweight & fast</li>
+                        <li>Lightweight &amp; fast</li>
                     </ul>
-                    <a href="#downloads" class="btn btn-primary">Download JLOCK</a>
+                    <p class="system-req">Windows 10+ | .NET Framework</p>
+                    <div class="download-buttons">
+                        <a href="#" class="btn btn-primary" onclick="alert('Download link coming soon'); return false;">
+                            <svg class="icon" width="16" height="16"><use href="#icon-download"></use></svg>
+                            Windows Installer
+                        </a>
+                        <a href="#" class="btn btn-secondary" onclick="alert('Portable version coming soon'); return false;">
+                            <svg class="icon" width="16" height="16"><use href="#icon-box"></use></svg>
+                            Portable Version
+                        </a>
+                    </div>
                 </div>
 
                 <!-- JVIEW -->
-                <div class="product-card">
+                <div class="product-card reveal">
                     <div class="product-icon">
-                        <img src="jview-icon.png" alt="JVIEW" class="icon-image">
+                        <img src="JVIEW.png" alt="JVIEW" class="icon-image">
                     </div>
                     <h3>JVIEW</h3>
-                    <p class="product-category">Image Viewing</p>
+                    <div class="product-meta">
+                        <span class="pill pill-soft">Image Viewing</span>
+                        <span class="pill pill-soft">Version 1.0.0</span>
+                    </div>
                     <p>Fast, clean image viewer without the bloat. Supports all common formats with an intuitive interface. Built for speed and simplicity, JVIEW gets out of your way and lets you focus on your images.</p>
                     <ul class="feature-list">
                         <li>Multi-format support</li>
@@ -108,51 +176,15 @@
                         <li>Clean, minimal interface</li>
                         <li>Low memory footprint</li>
                     </ul>
-                    <a href="#downloads" class="btn btn-primary">Download JVIEW</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Downloads Section -->
-    <section id="downloads" class="downloads">
-        <div class="container">
-            <h2>Downloads</h2>
-            <p class="downloads-intro">Get started with JSTech applications today. All downloads are free and available for Windows 10+.</p>
-            
-            <div class="downloads-grid">
-                <!-- JLOCK Download -->
-                <div class="download-card">
-                    <div class="download-icon">
-                        <img src="jlock-icon.png" alt="JLOCK" class="icon-image">
-                    </div>
-                    <h3>JLOCK</h3>
-                    <p class="version-info">Version: 1.0.0</p>
                     <p class="system-req">Windows 10+ | .NET Framework</p>
                     <div class="download-buttons">
-                        <a href="#" class="btn btn-primary" onclick="alert('Download link coming soon')">
-                            <span>⬇</span> Windows Installer
+                        <a href="#" class="btn btn-primary" onclick="alert('Download link coming soon'); return false;">
+                            <svg class="icon" width="16" height="16"><use href="#icon-download"></use></svg>
+                            Windows Installer
                         </a>
-                        <a href="#" class="btn btn-secondary" onclick="alert('Portable version coming soon')">
-                            <span>📦</span> Portable Version
-                        </a>
-                    </div>
-                </div>
-
-                <!-- JVIEW Download -->
-                <div class="download-card">
-                    <div class="download-icon">
-                        <img src="jview-icon.png" alt="JVIEW" class="icon-image">
-                    </div>
-                    <h3>JVIEW</h3>
-                    <p class="version-info">Version: 1.0.0</p>
-                    <p class="system-req">Windows 10+ | .NET Framework</p>
-                    <div class="download-buttons">
-                        <a href="#" class="btn btn-primary" onclick="alert('Download link coming soon')">
-                            <span>⬇</span> Windows Installer
-                        </a>
-                        <a href="#" class="btn btn-secondary" onclick="alert('Portable version coming soon')">
-                            <span>📦</span> Portable Version
+                        <a href="#" class="btn btn-secondary" onclick="alert('Portable version coming soon'); return false;">
+                            <svg class="icon" width="16" height="16"><use href="#icon-box"></use></svg>
+                            Portable Version
                         </a>
                     </div>
                 </div>
@@ -163,7 +195,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 JSTech. Independent software for Windows.</p>
+            <span class="logo-swap footer-mark">
+                <img src="JSHOT TECHNOLOGIES_LIGHT.png" alt="JSTech" class="logo-variant logo-asset-light">
+                <img src="JSHOT TECHNOLOGIES_DARK.png" alt="" class="logo-variant logo-asset-dark" aria-hidden="true">
+            </span>
+            <p>&copy; <span id="year">2024</span> JSTech. Independent software for Windows.</p>
             <p class="footer-text">Built on performance, designed for users, trusted for reliability.</p>
         </div>
     </footer>
